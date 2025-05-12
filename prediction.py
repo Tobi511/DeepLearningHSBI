@@ -7,7 +7,7 @@ import os
 import json
 
 # Lade das Modell
-model = load_model("FirstSteps\\shot_Number_ONE.h5")
+model = load_model("models/model_v1.h5")
 
 # Klassen definieren (müssen identisch zur Reihenfolge im Training sein!)
 #class_names = [
@@ -20,12 +20,12 @@ with open("class_names.json", "r") as f:
     class_names = json.load(f)
 
 # Bildpfad eingeben
-image_path = "C:\\#Informatik Studium\\6. Semester\\DeepLearning\\Projekt stuff\\Vegetable Images\\test\\Radish\\1187.jpg"  # <<< HIER ANPASSEN
+image_path = "C:\\#Informatik Studium\\6. Semester\\DeepLearning\\Projekt stuff\\Vegetable Images\\test\\Potato\\1005.jpg"  # <<< HIER ANPASSEN
 
 # Bild vorbereiten
 img = load_img(image_path, target_size=(224, 224))  # gleiche Größe wie beim Training
 img_array = img_to_array(img)
-img_array = img_array / 255.0  # Normalisieren (wenn kein Rescaling-Layer im Modell)
+# img_array = img_array / 255.0  # Normalisieren (wenn kein Rescaling-Layer im Modell)
 img_array = np.expand_dims(img_array, axis=0)  # Batch-Dimension hinzufügen
 
 # Vorhersage

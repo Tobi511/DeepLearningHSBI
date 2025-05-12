@@ -1,0 +1,37 @@
+C:\Users\Tobi\PycharmProjects\DeepLearningHSBI\.venv\Scripts\python.exe C:\Users\Tobi\PycharmProjects\DeepLearningHSBI\training_v9.py
+2025-05-11 16:17:22.522555: I tensorflow/core/platform/cpu_feature_guard.cc:193] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX AVX2
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2025-05-11 16:17:22.935211: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1616] Created device /job:localhost/replica:0/task:0/device:GPU:0 with 7423 MB memory:  -> device: 0, name: NVIDIA GeForce RTX 3080, pci bus id: 0000:0a:00.0, compute capability: 8.6
+Found 15000 files belonging to 15 classes.
+Found 3000 files belonging to 15 classes.
+Klassen: ['Bean', 'Bitter_Gourd', 'Bottle_Gourd', 'Brinjal', 'Broccoli', 'Cabbage', 'Capsicum', 'Carrot', 'Cauliflower', 'Cucumber', 'Papaya', 'Potato', 'Pumpkin', 'Radish', 'Tomato']
+Epoch 1/50
+2025-05-11 16:17:27.253147: I tensorflow/stream_executor/cuda/cuda_dnn.cc:384] Loaded cuDNN version 8100
+2025-05-11 16:17:28.635986: I tensorflow/stream_executor/cuda/cuda_blas.cc:1614] TensorFloat-32 will be used for the matrix multiplication. This will only be logged once.
+235/235 [==============================] - 13s 43ms/step - loss: 1.8484 - accuracy: 0.4251 - val_loss: 2.4790 - val_accuracy: 0.2983
+Epoch 2/50
+235/235 [==============================] - 10s 42ms/step - loss: 1.1414 - accuracy: 0.6530 - val_loss: 1.7550 - val_accuracy: 0.4710
+Epoch 3/50
+235/235 [==============================] - 10s 42ms/step - loss: 0.8441 - accuracy: 0.7501 - val_loss: 1.8546 - val_accuracy: 0.4507
+Epoch 4/50
+235/235 [==============================] - 10s 44ms/step - loss: 0.6770 - accuracy: 0.8023 - val_loss: 1.7604 - val_accuracy: 0.4953
+Epoch 5/50
+235/235 [==============================] - 10s 42ms/step - loss: 0.5598 - accuracy: 0.8395 - val_loss: 1.5811 - val_accuracy: 0.5180
+Epoch 6/50
+235/235 [==============================] - 10s 41ms/step - loss: 0.4696 - accuracy: 0.8696 - val_loss: 1.6749 - val_accuracy: 0.5373
+Epoch 7/50
+235/235 [==============================] - 10s 44ms/step - loss: 0.4079 - accuracy: 0.8839 - val_loss: 1.8744 - val_accuracy: 0.5027
+Epoch 8/50
+235/235 [==============================] - 10s 43ms/step - loss: 0.3445 - accuracy: 0.9083 - val_loss: 1.3108 - val_accuracy: 0.6030
+Epoch 9/50
+235/235 [==============================] - 10s 42ms/step - loss: 0.3010 - accuracy: 0.9199 - val_loss: 1.9470 - val_accuracy: 0.4903
+Epoch 10/50
+235/235 [==============================] - 11s 46ms/step - loss: 0.2602 - accuracy: 0.9329 - val_loss: 1.3785 - val_accuracy: 0.6200
+Epoch 11/50
+235/235 [==============================] - 10s 41ms/step - loss: 0.2366 - accuracy: 0.9382 - val_loss: 1.5367 - val_accuracy: 0.5797
+Epoch 12/50
+235/235 [==============================] - 10s 41ms/step - loss: 0.2118 - accuracy: 0.9479 - val_loss: 1.3476 - val_accuracy: 0.6233
+Epoch 13/50
+235/235 [==============================] - 11s 45ms/step - loss: 0.1887 - accuracy: 0.9535 - val_loss: 1.3529 - val_accuracy: 0.6297
+
+Process finished with exit code 0

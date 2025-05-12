@@ -29,7 +29,7 @@ test_ds = tf.keras.preprocessing.image_dataset_from_directory(
 class_names = test_ds.class_names
 
 # Modell laden
-model = load_model("FirstSteps\\shot_Number_ONE.h5")
+model = load_model("models/model_v2.h5")
 
 # Vorhersagen generieren
 y_pred_probs = model.predict(test_ds)

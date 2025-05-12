@@ -1,0 +1,79 @@
+C:\Users\Tobi\PycharmProjects\DeepLearningHSBI\.venv\Scripts\python.exe C:\Users\Tobi\PycharmProjects\DeepLearningHSBI\training_v13.py
+2025-05-11 18:54:55.526613: I tensorflow/core/platform/cpu_feature_guard.cc:193] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX AVX2
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2025-05-11 18:54:55.886643: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1616] Created device /job:localhost/replica:0/task:0/device:GPU:0 with 7423 MB memory:  -> device: 0, name: NVIDIA GeForce RTX 3080, pci bus id: 0000:0a:00.0, compute capability: 8.6
+Found 15000 files belonging to 15 classes.
+Found 3000 files belonging to 15 classes.
+Klassen: ['Bean', 'Bitter_Gourd', 'Bottle_Gourd', 'Brinjal', 'Broccoli', 'Cabbage', 'Capsicum', 'Carrot', 'Cauliflower', 'Cucumber', 'Papaya', 'Potato', 'Pumpkin', 'Radish', 'Tomato']
+Epoch 1/50
+2025-05-11 18:54:59.884577: I tensorflow/stream_executor/cuda/cuda_dnn.cc:384] Loaded cuDNN version 8100
+2025-05-11 18:55:01.144552: I tensorflow/stream_executor/cuda/cuda_blas.cc:1614] TensorFloat-32 will be used for the matrix multiplication. This will only be logged once.
+235/235 [==============================] - 37s 144ms/step - loss: 1.2398 - accuracy: 0.6414 - val_loss: 1.2422 - val_accuracy: 0.6323 - lr: 1.0000e-04
+Epoch 2/50
+235/235 [==============================] - 33s 141ms/step - loss: 0.5152 - accuracy: 0.8731 - val_loss: 1.6255 - val_accuracy: 0.5870 - lr: 1.0000e-04
+Epoch 3/50
+235/235 [==============================] - 33s 138ms/step - loss: 0.2947 - accuracy: 0.9360 - val_loss: 0.3460 - val_accuracy: 0.9117 - lr: 1.0000e-04
+Epoch 4/50
+235/235 [==============================] - 33s 140ms/step - loss: 0.1876 - accuracy: 0.9656 - val_loss: 0.2747 - val_accuracy: 0.9370 - lr: 1.0000e-04
+Epoch 5/50
+235/235 [==============================] - 33s 139ms/step - loss: 0.1386 - accuracy: 0.9781 - val_loss: 0.2518 - val_accuracy: 0.9330 - lr: 1.0000e-04
+Epoch 6/50
+235/235 [==============================] - 33s 140ms/step - loss: 0.1044 - accuracy: 0.9858 - val_loss: 0.3223 - val_accuracy: 0.9107 - lr: 1.0000e-04
+Epoch 7/50
+235/235 [==============================] - 33s 139ms/step - loss: 0.0812 - accuracy: 0.9919 - val_loss: 0.4470 - val_accuracy: 0.8733 - lr: 1.0000e-04
+Epoch 8/50
+235/235 [==============================] - 33s 140ms/step - loss: 0.0691 - accuracy: 0.9942 - val_loss: 0.1916 - val_accuracy: 0.9583 - lr: 1.0000e-04
+Epoch 9/50
+235/235 [==============================] - 33s 141ms/step - loss: 0.0706 - accuracy: 0.9921 - val_loss: 0.2082 - val_accuracy: 0.9533 - lr: 1.0000e-04
+Epoch 10/50
+235/235 [==============================] - 32s 137ms/step - loss: 0.0530 - accuracy: 0.9975 - val_loss: 0.2281 - val_accuracy: 0.9340 - lr: 1.0000e-04
+Epoch 11/50
+235/235 [==============================] - 33s 140ms/step - loss: 0.0458 - accuracy: 0.9983 - val_loss: 0.2244 - val_accuracy: 0.9410 - lr: 1.0000e-04
+Epoch 12/50
+235/235 [==============================] - ETA: 0s - loss: 0.0497 - accuracy: 0.9965
+Epoch 12: ReduceLROnPlateau reducing learning rate to 4.999999873689376e-05.
+235/235 [==============================] - 32s 138ms/step - loss: 0.0497 - accuracy: 0.9965 - val_loss: 0.2552 - val_accuracy: 0.9270 - lr: 1.0000e-04
+Epoch 13/50
+235/235 [==============================] - 33s 140ms/step - loss: 0.0374 - accuracy: 0.9995 - val_loss: 0.1380 - val_accuracy: 0.9677 - lr: 5.0000e-05
+Epoch 14/50
+235/235 [==============================] - 32s 137ms/step - loss: 0.0366 - accuracy: 0.9989 - val_loss: 0.1177 - val_accuracy: 0.9763 - lr: 5.0000e-05
+Epoch 15/50
+235/235 [==============================] - 33s 140ms/step - loss: 0.0336 - accuracy: 0.9995 - val_loss: 0.1092 - val_accuracy: 0.9773 - lr: 5.0000e-05
+Epoch 16/50
+235/235 [==============================] - 33s 140ms/step - loss: 0.0322 - accuracy: 0.9998 - val_loss: 0.1430 - val_accuracy: 0.9680 - lr: 5.0000e-05
+Epoch 17/50
+235/235 [==============================] - 33s 141ms/step - loss: 0.0323 - accuracy: 0.9996 - val_loss: 0.1111 - val_accuracy: 0.9767 - lr: 5.0000e-05
+Epoch 18/50
+235/235 [==============================] - 33s 141ms/step - loss: 0.0336 - accuracy: 0.9989 - val_loss: 0.1023 - val_accuracy: 0.9777 - lr: 5.0000e-05
+Epoch 19/50
+235/235 [==============================] - 33s 139ms/step - loss: 0.0299 - accuracy: 0.9999 - val_loss: 0.1663 - val_accuracy: 0.9600 - lr: 5.0000e-05
+Epoch 20/50
+235/235 [==============================] - 33s 140ms/step - loss: 0.0289 - accuracy: 0.9998 - val_loss: 0.1847 - val_accuracy: 0.9533 - lr: 5.0000e-05
+Epoch 21/50
+235/235 [==============================] - 33s 141ms/step - loss: 0.0323 - accuracy: 0.9992 - val_loss: 0.1484 - val_accuracy: 0.9630 - lr: 5.0000e-05
+Epoch 22/50
+235/235 [==============================] - ETA: 0s - loss: 0.0304 - accuracy: 0.9995
+Epoch 22: ReduceLROnPlateau reducing learning rate to 2.499999936844688e-05.
+235/235 [==============================] - 32s 137ms/step - loss: 0.0304 - accuracy: 0.9995 - val_loss: 0.1162 - val_accuracy: 0.9760 - lr: 5.0000e-05
+Epoch 23/50
+235/235 [==============================] - 33s 140ms/step - loss: 0.0275 - accuracy: 0.9998 - val_loss: 0.0961 - val_accuracy: 0.9797 - lr: 2.5000e-05
+Epoch 24/50
+235/235 [==============================] - 34s 143ms/step - loss: 0.0264 - accuracy: 0.9999 - val_loss: 0.1097 - val_accuracy: 0.9763 - lr: 2.5000e-05
+Epoch 25/50
+235/235 [==============================] - 33s 140ms/step - loss: 0.0258 - accuracy: 1.0000 - val_loss: 0.1031 - val_accuracy: 0.9783 - lr: 2.5000e-05
+Epoch 26/50
+235/235 [==============================] - 33s 139ms/step - loss: 0.0252 - accuracy: 1.0000 - val_loss: 0.0873 - val_accuracy: 0.9797 - lr: 2.5000e-05
+Epoch 27/50
+235/235 [==============================] - 33s 138ms/step - loss: 0.0250 - accuracy: 0.9999 - val_loss: 0.1091 - val_accuracy: 0.9753 - lr: 2.5000e-05
+Epoch 28/50
+235/235 [==============================] - 33s 140ms/step - loss: 0.0249 - accuracy: 1.0000 - val_loss: 0.1190 - val_accuracy: 0.9723 - lr: 2.5000e-05
+Epoch 29/50
+235/235 [==============================] - 33s 139ms/step - loss: 0.0248 - accuracy: 0.9999 - val_loss: 0.1141 - val_accuracy: 0.9757 - lr: 2.5000e-05
+Epoch 30/50
+235/235 [==============================] - ETA: 0s - loss: 0.0247 - accuracy: 0.9999
+Epoch 30: ReduceLROnPlateau reducing learning rate to 1.249999968422344e-05.
+235/235 [==============================] - 34s 142ms/step - loss: 0.0247 - accuracy: 0.9999 - val_loss: 0.0921 - val_accuracy: 0.9757 - lr: 2.5000e-05
+Epoch 31/50
+235/235 [==============================] - 32s 137ms/step - loss: 0.0235 - accuracy: 0.9999 - val_loss: 0.1018 - val_accuracy: 0.9777 - lr: 1.2500e-05
+
+Process finished with exit code 0
