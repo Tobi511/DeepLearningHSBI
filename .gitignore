@@ -1,5 +1,7 @@
 .idea/
 .venv/
 Vegetable Images/
+Crossvalidation Vegetable Images/
 1st_wave/models/
 2nd_wave/models/
+3rd_wave/models/

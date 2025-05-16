@@ -28,6 +28,9 @@ test_ds = tf.keras.preprocessing.image_dataset_from_directory(
 # Klassenliste merken
 class_names = test_ds.class_names
 
+normalization_layer = tf.keras.layers.Rescaling(1./255)
+test_ds = test_ds.map(lambda x, y: (normalization_layer(x), y))
+
 # Modell laden
 model = load_model("../3rd_wave/models/model_v4/model_v4_r2.h5")
 
