@@ -1,0 +1,21 @@
+              precision    recall  f1-score   support
+
+        Bean       0.96      0.98      0.97       200
+Bitter_Gourd       0.88      0.99      0.93       200
+Bottle_Gourd       0.96      0.89      0.92       200
+     Brinjal       0.78      0.92      0.84       200
+    Broccoli       0.96      0.98      0.97       200
+     Cabbage       0.94      0.95      0.95       200
+    Capsicum       0.99      0.96      0.98       200
+      Carrot       0.99      1.00      1.00       200
+ Cauliflower       0.97      0.95      0.96       200
+    Cucumber       0.99      0.82      0.90       200
+      Papaya       0.83      0.73      0.78       200
+      Potato       0.99      1.00      0.99       200
+     Pumpkin       0.96      0.99      0.98       200
+      Radish       0.98      0.98      0.98       200
+      Tomato       0.99      0.96      0.98       200
+
+    accuracy                           0.94      3000
+   macro avg       0.94      0.94      0.94      3000
+weighted avg       0.94      0.94      0.94      3000
