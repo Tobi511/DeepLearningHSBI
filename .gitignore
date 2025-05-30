@@ -2,6 +2,9 @@
 .venv/
 Vegetable Images/
 Crossvalidation Vegetable Images/
+FirstSteps/Kältekammer
 Meilenstein 2/1st_wave/models/
 Meilenstein 2/2nd_wave/models/
 Meilenstein 2/3rd_wave/models/
+Meilenstein 3/Feature Extraction/models
+Meilenstein 3/Fine Tuning/models

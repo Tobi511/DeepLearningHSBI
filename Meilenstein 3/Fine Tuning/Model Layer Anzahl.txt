@@ -1,0 +1,6 @@
+Modell               # Layers   10% Layers
+------------------------------------------
+MobileNetV2          154        15
+EfficientNetB0       238        24
+EfficientNetB3       385        38
+ResNet50             175        18

@@ -1,0 +1,67 @@
+2025-05-30 14:59:09.844072: I tensorflow/core/platform/cpu_feature_guard.cc:193] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX AVX2
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2025-05-30 14:59:10.187465: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1616] Created device /job:localhost/replica:0/task:0/device:GPU:0 with 7423 MB memory:  -> device: 0, name: NVIDIA GeForce RTX 3080, pci bus id: 0000:0a:00.0, compute capability: 8.6
+Found 15000 files belonging to 15 classes.
+Found 3000 files belonging to 15 classes.
+Model: "model"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #
+=================================================================
+ input_2 (InputLayer)        [(None, 300, 300, 3)]     0
+
+ efficientnetb3 (Functional)  (None, 10, 10, 1536)     10783535
+
+ global_average_pooling2d (G  (None, 1536)             0
+ lobalAveragePooling2D)
+
+ dense (Dense)               (None, 15)                23055
+
+=================================================================
+Total params: 10,806,590
+Trainable params: 23,055
+Non-trainable params: 10,783,535
+_________________________________________________________________
+Epoch 1/20
+2025-05-30 14:59:22.060996: I tensorflow/stream_executor/cuda/cuda_dnn.cc:384] Loaded cuDNN version 8100
+2025-05-30 14:59:23.749021: I tensorflow/stream_executor/cuda/cuda_blas.cc:1614] TensorFloat-32 will be used for the matrix multiplication. This will only be logged once.
+118/118 [==============================] - 91s 706ms/step - loss: 0.5387 - accuracy: 0.9145 - val_loss: 0.1109 - val_accuracy: 0.9867 - lr: 0.0010
+Epoch 2/20
+118/118 [==============================] - 36s 303ms/step - loss: 0.0836 - accuracy: 0.9903 - val_loss: 0.0555 - val_accuracy: 0.9940 - lr: 0.0010
+Epoch 3/20
+118/118 [==============================] - 36s 304ms/step - loss: 0.0471 - accuracy: 0.9950 - val_loss: 0.0367 - val_accuracy: 0.9950 - lr: 0.0010
+Epoch 4/20
+118/118 [==============================] - 36s 305ms/step - loss: 0.0321 - accuracy: 0.9967 - val_loss: 0.0274 - val_accuracy: 0.9953 - lr: 0.0010
+Epoch 5/20
+118/118 [==============================] - 36s 304ms/step - loss: 0.0238 - accuracy: 0.9973 - val_loss: 0.0219 - val_accuracy: 0.9960 - lr: 0.0010
+Epoch 6/20
+118/118 [==============================] - 36s 304ms/step - loss: 0.0187 - accuracy: 0.9979 - val_loss: 0.0183 - val_accuracy: 0.9963 - lr: 0.0010
+Epoch 7/20
+118/118 [==============================] - 36s 305ms/step - loss: 0.0151 - accuracy: 0.9983 - val_loss: 0.0158 - val_accuracy: 0.9967 - lr: 0.0010
+Epoch 8/20
+118/118 [==============================] - 36s 305ms/step - loss: 0.0125 - accuracy: 0.9987 - val_loss: 0.0139 - val_accuracy: 0.9967 - lr: 0.0010
+Epoch 9/20
+118/118 [==============================] - 36s 304ms/step - loss: 0.0105 - accuracy: 0.9991 - val_loss: 0.0125 - val_accuracy: 0.9973 - lr: 0.0010
+Epoch 10/20
+118/118 [==============================] - 36s 303ms/step - loss: 0.0090 - accuracy: 0.9995 - val_loss: 0.0113 - val_accuracy: 0.9973 - lr: 0.0010
+Epoch 11/20
+118/118 [==============================] - 36s 303ms/step - loss: 0.0078 - accuracy: 0.9996 - val_loss: 0.0104 - val_accuracy: 0.9977 - lr: 0.0010
+Epoch 12/20
+118/118 [==============================] - 36s 303ms/step - loss: 0.0068 - accuracy: 0.9997 - val_loss: 0.0096 - val_accuracy: 0.9983 - lr: 0.0010
+Epoch 13/20
+118/118 [==============================] - 36s 303ms/step - loss: 0.0060 - accuracy: 0.9997 - val_loss: 0.0090 - val_accuracy: 0.9983 - lr: 0.0010
+Epoch 14/20
+118/118 [==============================] - 36s 303ms/step - loss: 0.0054 - accuracy: 0.9997 - val_loss: 0.0084 - val_accuracy: 0.9983 - lr: 0.0010
+Epoch 15/20
+118/118 [==============================] - 36s 303ms/step - loss: 0.0048 - accuracy: 0.9997 - val_loss: 0.0080 - val_accuracy: 0.9983 - lr: 0.0010
+Epoch 16/20
+118/118 [==============================] - 36s 303ms/step - loss: 0.0043 - accuracy: 0.9998 - val_loss: 0.0076 - val_accuracy: 0.9983 - lr: 0.0010
+Epoch 17/20
+118/118 [==============================] - 36s 303ms/step - loss: 0.0039 - accuracy: 0.9998 - val_loss: 0.0072 - val_accuracy: 0.9983 - lr: 0.0010
+Epoch 18/20
+118/118 [==============================] - 36s 303ms/step - loss: 0.0035 - accuracy: 0.9999 - val_loss: 0.0069 - val_accuracy: 0.9983 - lr: 0.0010
+Epoch 19/20
+118/118 [==============================] - 36s 303ms/step - loss: 0.0032 - accuracy: 0.9999 - val_loss: 0.0066 - val_accuracy: 0.9983 - lr: 0.0010
+Epoch 20/20
+118/118 [==============================] - 36s 303ms/step - loss: 0.0029 - accuracy: 1.0000 - val_loss: 0.0064 - val_accuracy: 0.9983 - lr: 0.0010
+
+Process finished with exit code 0

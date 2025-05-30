@@ -1,0 +1,105 @@
+2025-05-29 12:19:54.322516: I tensorflow/core/platform/cpu_feature_guard.cc:193] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX AVX2
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2025-05-29 12:19:54.678685: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1616] Created device /job:localhost/replica:0/task:0/device:GPU:0 with 7423 MB memory:  -> device: 0, name: NVIDIA GeForce RTX 3080, pci bus id: 0000:0a:00.0, compute capability: 8.6
+Found 15000 files belonging to 15 classes.
+Found 3000 files belonging to 15 classes.
+Klassen: ['Bean', 'Bitter_Gourd', 'Bottle_Gourd', 'Brinjal', 'Broccoli', 'Cabbage', 'Capsicum', 'Carrot', 'Cauliflower', 'Cucumber', 'Papaya', 'Potato', 'Pumpkin', 'Radish', 'Tomato']
+Model: "sequential_1"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #
+=================================================================
+ conv2d (Conv2D)             (None, 224, 224, 32)      896
+
+ batch_normalization (BatchN  (None, 224, 224, 32)     128
+ ormalization)
+
+ activation (Activation)     (None, 224, 224, 32)      0
+
+ max_pooling2d (MaxPooling2D  (None, 112, 112, 32)     0
+ )
+
+ conv2d_1 (Conv2D)           (None, 112, 112, 64)      18496
+
+ batch_normalization_1 (Batc  (None, 112, 112, 64)     256
+ hNormalization)
+
+ activation_1 (Activation)   (None, 112, 112, 64)      0
+
+ max_pooling2d_1 (MaxPooling  (None, 56, 56, 64)       0
+ 2D)
+
+ conv2d_2 (Conv2D)           (None, 56, 56, 128)       73856
+
+ batch_normalization_2 (Batc  (None, 56, 56, 128)      512
+ hNormalization)
+
+ activation_2 (Activation)   (None, 56, 56, 128)       0
+
+ conv2d_3 (Conv2D)           (None, 56, 56, 128)       147584
+
+ batch_normalization_3 (Batc  (None, 56, 56, 128)      512
+ hNormalization)
+
+ activation_3 (Activation)   (None, 56, 56, 128)       0
+
+ conv2d_4 (Conv2D)           (None, 56, 56, 128)       147584
+
+ batch_normalization_4 (Batc  (None, 56, 56, 128)      512
+ hNormalization)
+
+ activation_4 (Activation)   (None, 56, 56, 128)       0
+
+ max_pooling2d_2 (MaxPooling  (None, 28, 28, 128)      0
+ 2D)
+
+ conv2d_5 (Conv2D)           (None, 28, 28, 256)       295168
+
+ batch_normalization_5 (Batc  (None, 28, 28, 256)      1024
+ hNormalization)
+
+ activation_5 (Activation)   (None, 28, 28, 256)       0
+
+ max_pooling2d_3 (MaxPooling  (None, 14, 14, 256)      0
+ 2D)
+
+ global_average_pooling2d (G  (None, 256)              0
+ lobalAveragePooling2D)
+
+ dense (Dense)               (None, 128)               32896
+
+ batch_normalization_6 (Batc  (None, 128)              512
+ hNormalization)
+
+ dropout (Dropout)           (None, 128)               0
+
+ dense_1 (Dense)             (None, 15)                1935
+
+=================================================================
+Total params: 721,871
+Trainable params: 720,143
+Non-trainable params: 1,728
+_________________________________________________________________
+Epoch 1/10
+2025-05-29 12:20:00.090474: I tensorflow/stream_executor/cuda/cuda_dnn.cc:384] Loaded cuDNN version 8100
+2025-05-29 12:20:01.953562: I tensorflow/stream_executor/cuda/cuda_blas.cc:1614] TensorFloat-32 will be used for the matrix multiplication. This will only be logged once.
+118/118 [==============================] - 84s 647ms/step - loss: 1.1712 - accuracy: 0.6841 - val_loss: 2.9201 - val_accuracy: 0.0750 - lr: 1.0000e-04
+Epoch 2/10
+118/118 [==============================] - 46s 394ms/step - loss: 0.5052 - accuracy: 0.8909 - val_loss: 3.8388 - val_accuracy: 0.0823 - lr: 1.0000e-04
+Epoch 3/10
+118/118 [==============================] - 46s 388ms/step - loss: 0.3590 - accuracy: 0.9346 - val_loss: 4.4213 - val_accuracy: 0.1180 - lr: 1.0000e-04
+Epoch 4/10
+118/118 [==============================] - 37s 316ms/step - loss: 0.2842 - accuracy: 0.9550 - val_loss: 2.2265 - val_accuracy: 0.4003 - lr: 1.0000e-04
+Epoch 5/10
+118/118 [==============================] - 42s 356ms/step - loss: 0.2462 - accuracy: 0.9649 - val_loss: 0.6761 - val_accuracy: 0.8040 - lr: 1.0000e-04
+Epoch 6/10
+118/118 [==============================] - 44s 376ms/step - loss: 0.2135 - accuracy: 0.9716 - val_loss: 0.4800 - val_accuracy: 0.8760 - lr: 1.0000e-04
+Epoch 7/10
+118/118 [==============================] - 43s 361ms/step - loss: 0.1867 - accuracy: 0.9799 - val_loss: 0.5182 - val_accuracy: 0.8540 - lr: 1.0000e-04
+Epoch 8/10
+118/118 [==============================] - 40s 336ms/step - loss: 0.1691 - accuracy: 0.9833 - val_loss: 0.4425 - val_accuracy: 0.8810 - lr: 1.0000e-04
+Epoch 9/10
+118/118 [==============================] - 42s 353ms/step - loss: 0.1596 - accuracy: 0.9857 - val_loss: 0.4016 - val_accuracy: 0.9010 - lr: 1.0000e-04
+Epoch 10/10
+118/118 [==============================] - 39s 328ms/step - loss: 0.1468 - accuracy: 0.9876 - val_loss: 0.4854 - val_accuracy: 0.8643 - lr: 1.0000e-04
+
+Process finished with exit code 0
