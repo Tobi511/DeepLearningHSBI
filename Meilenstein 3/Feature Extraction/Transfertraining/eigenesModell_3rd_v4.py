@@ -16,7 +16,7 @@ tf.get_logger().setLevel('ERROR')
 # ---------------------------------------------------------------------------------------------------------
 
 version = "ownModel"
-run = "r1"
+run = "r2"
 
 # Ausgabe-Verzeichnisse und Dateien
 results_dir = f"../results/results_{version}/results_{version}_{run}"
@@ -139,7 +139,7 @@ lr_scheduler = tf.keras.callbacks.ReduceLROnPlateau(
 history = model.fit(
     train_ds,
     validation_data=val_ds,
-    epochs=10,
+    epochs=20,
     callbacks=[early_stop, lr_scheduler]
 )
 

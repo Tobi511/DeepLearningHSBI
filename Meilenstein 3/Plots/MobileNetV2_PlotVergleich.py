@@ -1,5 +1,6 @@
 import matplotlib.pyplot as plt
 
+
 def read_training_log(filepath):
     acc, val_acc, loss, val_loss = [], [], [], []
     with open(filepath, 'r') as f:
@@ -14,12 +15,13 @@ def read_training_log(filepath):
         val_loss.append(float(parts[4]))
     return acc, val_acc, loss, val_loss
 
+
 # === Dateipfade ===
-logfile1 = ("../Fine Tuning/results/results_EfficientNetB0_tuning/results_EfficientNetB0_tuning_r1"
-            "/transfertrainingsverlauf_EfficientNetB0_tuning_r1.txt")
-logfile2 = ("../Feature Extraction/results/results_EfficientNetB0_FE/results_EfficientNetB0_FE_r1"
-            "/transfertrainingsverlauf_EfficientNetB0_FE_r1.txt")
-plot_path = "EfficientNetB0_vergleich.png"
+logfile1 = ("../Fine Tuning/results/results_MobileNetV2_tuning/results_MobileNetV2_tuning_r2"
+            "/transfertrainingsverlauf_MobileNetV2_tuning_r2.txt")
+logfile2 = ("../Feature Extraction/results/results_MobileNetV2_FE/results_MobileNetV2_FE_r1"
+            "/transfertrainingsverlauf_MobileNetV2_FE_r1.txt")
+plot_path = "MobileNetV2_vergleich.png"
 
 # === Einlesen ===
 acc1, val_acc1, loss1, val_loss1 = read_training_log(logfile1)
@@ -42,47 +44,48 @@ fig, axs = plt.subplots(2, 2, figsize=(14, 10))
 
 # Logdatei 2
 axs[0, 0].plot(epochs2, acc2, label='Feature Extraction', linestyle='-', marker='o')
-axs[0, 0].plot(epochs1, acc1, label='Fine Tuning', linestyle='--', marker='x')
+axs[0, 0].plot(epochs1, acc1, label='Fine Tuning', linestyle='-', marker='x')
 axs[0, 0].set_title("Train Accuracy")
 axs[0, 0].set_xlabel("Epoch")
 axs[0, 0].set_ylabel("Accuracy")
 axs[0, 0].grid(True, linestyle='--', linewidth=0.5)
+axs[0, 0].set_xticks(ticks=[i * 1 for i in range(1, 21)])
 axs[0, 0].legend()
 axs[0, 0].set_ylim(0.98, 1.0)
 
 axs[0, 1].plot(epochs2, loss2, label='Feature Extraction', linestyle='-', marker='o')
-axs[0, 1].plot(epochs1, loss1, label='Fine Tuning', linestyle='--', marker='x')
+axs[0, 1].plot(epochs1, loss1, label='Fine Tuning', linestyle='-', marker='x')
 axs[0, 1].set_title("Train Loss")
 axs[0, 1].set_xlabel("Epoch")
 axs[0, 1].set_ylabel("Loss")
 axs[0, 1].grid(True, linestyle='--', linewidth=0.5)
+axs[0, 1].set_xticks(ticks=[i * 1 for i in range(1, 21)])
 axs[0, 1].legend()
 axs[0, 1].set_ylim(0.0, 0.01)
 
-
 axs[1, 0].plot(epochs2, val_acc2, label='Feature Extraction', linestyle='-', marker='o')
-axs[1, 0].plot(epochs1, val_acc1, label='Fine Tuning', linestyle='--', marker='x')
+axs[1, 0].plot(epochs1, val_acc1, label='Fine Tuning', linestyle='-', marker='x')
 axs[1, 0].set_title("Validation Accuracy")
 axs[1, 0].set_xlabel("Epoch")
 axs[1, 0].set_ylabel("Accuracy")
 axs[1, 0].grid(True, linestyle='--', linewidth=0.5)
+axs[1, 0].set_xticks(ticks=[i * 1 for i in range(1, 21)])
 axs[1, 0].legend()
 axs[1, 0].set_ylim(0.98, 1.0)
 
 axs[1, 1].plot(epochs2, val_loss2, label='Feature Extraction', linestyle='-', marker='o')
-axs[1, 1].plot(epochs1, val_loss1, label='Fine Tuning', linestyle='--', marker='x')
+axs[1, 1].plot(epochs1, val_loss1, label='Fine Tuning', linestyle='-', marker='x')
 axs[1, 1].set_title("Validation Loss")
 axs[1, 1].set_xlabel("Epoch")
 axs[1, 1].set_ylabel("Loss")
 axs[1, 1].grid(True, linestyle='--', linewidth=0.5)
+axs[1, 1].set_xticks(ticks=[i * 1 for i in range(1, 21)])
 axs[1, 1].legend()
 axs[1, 1].set_ylim(0.0, 0.01)
 
+# plt.tight_layout()
 
-
-#plt.tight_layout()
-
-fig.suptitle("EfficientNetB0: Feature Extraction vs. Fine Tuning", fontsize=16)
+fig.suptitle("MobileNetV2: Feature Extraction vs. Fine Tuning", fontsize=16)
 plt.tight_layout(rect=[0, 0, 1, 0.96])
 
 plt.savefig(plot_path)

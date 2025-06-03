@@ -9,18 +9,19 @@ from sklearn.metrics import confusion_matrix, classification_report
 
 import tensorflow as tf
 from tensorflow.keras import layers, Model
-from tensorflow.keras.applications.efficientnet import EfficientNetB3, preprocess_input
+from tensorflow.keras.applications.resnet50 import ResNet50, preprocess_input
 
 # ─── PARAMETERS ────────────────────────────────────────────────────────────────
-IMG_SIZE       = 300                  # MUSS zum Training passen!
+IMG_SIZE       = 224                  # MUSS zum Training passen!
 BATCH_SIZE     = 128
 NUM_CLASSES    = 15
-WEIGHTS_PATH   = "../Meilenstein 3/Feature Extraction/models/model_v2/model_v2_r2/weights_v2_r2.h5"
+WEIGHTS_PATH   = "../Meilenstein 3/Fine Tuning/models/model_ResNet50_tuning/weights_ResNet50_tuning_r4.h5"
 TEST_DATA_DIR  = "..\\Vegetable Images\\test"
 # ────────────────────────────────────────────────────────────────────────────────
 
 # Hier noch eine dynamische Anpassung für das Speichern hinzufügen
-plot_path = "../FirstSteps/Kältekammer/results_v2/results_v2_r2/Confusion_Matrix"
+plot_path = ("../Meilenstein 3/Fine Tuning/results/results_ResNet50_tuning/results_ResNet50_tuning_r4"
+             "/Confusionmatrix_ResNet50_tuning_r4.png")
 
 
 # 1) Test-Dataset laden und preprocess_input anwenden
@@ -36,13 +37,15 @@ class_names  = test_ds.class_names
 test_ds = test_ds.map(lambda x, y: (preprocess_input(x), y))
 
 # 2) Architektur exakt nach Training rekonstruieren
-backbone = EfficientNetB3(
+backbone = ResNet50(
     include_top=False,
     weights=None,                  # NICHT 'imagenet'!
     input_shape=(IMG_SIZE, IMG_SIZE, 3)
 )
-# Partial fine-tuning war aktiv, hier laden wir nur Gewichte, also freeze komplett
-backbone.trainable = False
+# Partial Fine-Tuning: nur letzte 20 Layer trainierbar
+backbone.trainable = True  # True
+for layer in backbone.layers[:-18]:
+    layer.trainable = False
 
 inputs = layers.Input(shape=(IMG_SIZE, IMG_SIZE, 3))
 x = backbone(inputs, training=False)

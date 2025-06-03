@@ -1,0 +1,31 @@
+Found 3000 files belonging to 15 classes.
+2025-06-03 16:30:14.374869: I tensorflow/core/platform/cpu_feature_guard.cc:193] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX AVX2
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2025-06-03 16:30:14.715455: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1616] Created device /job:localhost/replica:0/task:0/device:GPU:0 with 7423 MB memory:  -> device: 0, name: NVIDIA GeForce RTX 3080, pci bus id: 0000:0a:00.0, compute capability: 8.6
+2025-06-03 16:30:16.788875: I tensorflow/stream_executor/cuda/cuda_dnn.cc:384] Loaded cuDNN version 8100
+2025-06-03 16:30:18.140701: I tensorflow/stream_executor/cuda/cuda_blas.cc:1614] TensorFloat-32 will be used for the matrix multiplication. This will only be logged once.
+24/24 [==============================] - 4s 55ms/step
+              precision    recall  f1-score   support
+
+        Bean       0.99      0.90      0.94       200
+Bitter_Gourd       0.89      0.96      0.93       200
+Bottle_Gourd       0.97      0.94      0.96       200
+     Brinjal       0.83      0.98      0.90       200
+    Broccoli       0.88      1.00      0.93       200
+     Cabbage       0.97      0.90      0.93       200
+    Capsicum       0.97      0.96      0.97       200
+      Carrot       1.00      1.00      1.00       200
+ Cauliflower       0.96      0.94      0.95       200
+    Cucumber       0.97      0.94      0.96       200
+      Papaya       0.95      0.79      0.86       200
+      Potato       0.99      0.99      0.99       200
+     Pumpkin       0.91      0.99      0.95       200
+      Radish       0.99      0.99      0.99       200
+      Tomato       0.99      0.94      0.97       200
+
+    accuracy                           0.95      3000
+   macro avg       0.95      0.95      0.95      3000
+weighted avg       0.95      0.95      0.95      3000
+
+
+Process finished with exit code 0

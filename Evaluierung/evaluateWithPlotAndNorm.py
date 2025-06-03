@@ -32,7 +32,7 @@ normalization_layer = tf.keras.layers.Rescaling(1./255)
 test_ds = test_ds.map(lambda x, y: (normalization_layer(x), y))
 
 # Modell laden
-model = load_model("../Meilenstein 2/3rd_wave/models/model_v1/model_v1_r1.h5")
+model = load_model("../Meilenstein 3/Feature Extraction/models/model_ownModel/model_ownModel_r2.h5")
 
 # Vorhersagen generieren
 y_pred_probs = model.predict(test_ds)

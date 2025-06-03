@@ -21,7 +21,7 @@ from tensorflow.keras.callbacks import ReduceLROnPlateau, EarlyStopping
 tf.get_logger().setLevel('ERROR')
 
 version = "MobileNetV2_tuning"
-run = "r1"
+run = "r2"
 
 # Pfade anlegen
 results_dir = f"../results/results_{version}/results_{version}_{run}"
@@ -170,6 +170,6 @@ plt.savefig(plot_path)
 
 # Trainingslog abspeichern
 with open(log_path, "w") as f:
-    f.write(f"{'Epoch':<6}{'Acc':<10}{'Val_Acc':<10}{'Loss':<10}{'Val_Loss':<10}\n")
+    f.write(f"{'Epoch':<6}{'Acc':<14}{'Val_Acc':<14}{'Loss':<14}{'Val_Loss':<14}\n")
     for i in epochs_range:
-        f.write(f"{i:<6}{acc[i - 1]:<10.4f}{val_acc[i - 1]:<10.4f}{loss[i - 1]:<10.4f}{val_loss[i - 1]:<10.4f}\n")
+        f.write(f"{i:<6}{acc[i - 1]:<14.8f}{val_acc[i - 1]:<14.8f}{loss[i - 1]:<14.8f}{val_loss[i - 1]:<14.8f}\n")
