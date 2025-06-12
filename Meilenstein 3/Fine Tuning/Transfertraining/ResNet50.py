@@ -90,7 +90,7 @@ backbone = ResNet50(
     weights="imagenet",
     input_shape=(IMG_SIZE, IMG_SIZE, 3)
 )
-# Partial Fine-Tuning: nur letzte 20 Layer trainierbar
+# Partial Fine-Tuning: nur letzte 18 Layer trainierbar
 backbone.trainable = True  # True
 for layer in backbone.layers[:-18]:
     layer.trainable = False
@@ -99,9 +99,6 @@ for layer in backbone.layers[:-18]:
 inputs = layers.Input(shape=(IMG_SIZE, IMG_SIZE, 3))
 x = backbone(inputs, training=False)  # Backbone im Inferenz-Modus für BatchNorm
 x = layers.GlobalAveragePooling2D()(x)
-#x = layers.Dense(128, activation="relu", kernel_regularizer=regularizers.l2(0.0005))(x)  # l2 regularizer neu in v7r1
-#x = layers.BatchNormalization()(x)
-#x = layers.Dropout(0.3)(x)
 outputs = layers.Dense(NUM_CLASSES, activation="softmax")(x)
 
 model = Model(inputs, outputs)
