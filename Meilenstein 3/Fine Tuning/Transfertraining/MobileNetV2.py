@@ -90,7 +90,7 @@ backbone = MobileNetV2(
     weights="imagenet",
     input_shape=(IMG_SIZE, IMG_SIZE, 3)
 )
-# Partial Fine-Tuning: nur letzte 20 Layer trainierbar
+# Partial Fine-Tuning: nur letzte 15 Layer trainierbar
 backbone.trainable = True  # True
 for layer in backbone.layers[:-15]: # 15 Layer ~ 10 %
     layer.trainable = False # alle außer den letzten 15 einfrieren
