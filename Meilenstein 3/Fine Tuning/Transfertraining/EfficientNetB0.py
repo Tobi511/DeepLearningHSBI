@@ -90,7 +90,7 @@ backbone = EfficientNetB0(
     weights="imagenet",
     input_shape=(IMG_SIZE, IMG_SIZE, 3)
 )
-# Partial Fine-Tuning: nur letzte 20 Layer trainierbar
+# Partial Fine-Tuning: nur letzte 24 Layer trainierbar
 backbone.trainable = True  # True
 for layer in backbone.layers[:-24]:
     layer.trainable = False
