@@ -27,3 +27,14 @@ Meilenstein 3: 13.06.2025 8:00 Uhr
     Die Ergebnisse sind jeweils im zugehörigen 'results' Ordner zu finden.
     
     Der Vergleich der zwischen Fine Tuning und Feature Extraction ist im Ordner 'Plots' zu finden.
+
+
+Meilenstein 4: 04.07.2025 8:00 Uhr
+
+    Alle relevanten Dateien für den Meilenstein befinden sich im entsprechenden Ordner.
+    
+    Im Ordner Offline Distillation befindet sich jeweils unter 'training' der Code für das Training und auch der Code zur Erstellung einer HeatMap für ein einzelnes Bild.
+    
+    Die Ergebnisse sind jeweils im zugehörigen 'results' Ordner zu finden.
+
+    Die Evaluation des Students wurde mit dem Skript 'evaluateStudent.py' aus dem Ordner Evaluierung durchgeführt.

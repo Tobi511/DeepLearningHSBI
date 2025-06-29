@@ -8,3 +8,6 @@ Meilenstein 2/2nd_wave/models/
 Meilenstein 2/3rd_wave/models/
 Meilenstein 3/Feature Extraction/models
 Meilenstein 3/Fine Tuning/models
+Meilenstein 4/Offline Distillation/models
+Meilenstein 4/Offline Distillation/storage_old
+Meilenstein 4/Offline Distillation/training/gradcam_output
