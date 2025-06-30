@@ -15,13 +15,12 @@ from tensorflow.keras.applications.resnet50 import ResNet50, preprocess_input
 IMG_SIZE       = 224                  # MUSS zum Training passen!
 BATCH_SIZE     = 128
 NUM_CLASSES    = 15
-WEIGHTS_PATH   = "../Meilenstein 3/Fine Tuning/models/model_ResNet50_tuning/weights_ResNet50_tuning_r4.h5"
-TEST_DATA_DIR  = "..\\Vegetable Images\\test"
+WEIGHTS_PATH   = "../Meilenstein 4/Offline Distillation/storage_old/model_ResNet50_tuning/weights_ResNet50_tuning_r5.h5"
+TEST_DATA_DIR  = "..\\Vegetable Images\\test_v2"
 # ────────────────────────────────────────────────────────────────────────────────
 
 # Hier noch eine dynamische Anpassung für das Speichern hinzufügen
-plot_path = ("../Meilenstein 3/Fine Tuning/results/results_ResNet50_tuning/results_ResNet50_tuning_r4"
-             "/Confusionmatrix_ResNet50_tuning_r4.png")
+plot_path = ("../Meilenstein 4/Offline Distillation/results/Confusionmatrix_ResNet50_tuning_r4_datasetv2.png")
 
 
 # 1) Test-Dataset laden und preprocess_input anwenden

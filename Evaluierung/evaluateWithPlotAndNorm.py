@@ -12,7 +12,7 @@ from tensorflow.keras.models import load_model
 
 
 # Testdaten einlesen
-test_data_dir = "..\\Vegetable Images\\test"  # Passe den Pfad ggf. an
+test_data_dir = "..\\Vegetable Images\\test_v2"  # Passe den Pfad ggf. an
 
 img_size = (224, 224)
 batch_size = 128
