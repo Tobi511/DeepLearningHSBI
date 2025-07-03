@@ -22,7 +22,6 @@ TEST_DATA_DIR  = "..\\Vegetable Images\\test_v2"
 # ────────────────────────────────────────────────────────────────────────────────
 
 
-# Hier noch eine dynamische Anpassung für das Speichern hinzufügen
 plot_path = ("../Meilenstein 4/Offline Distillation/results/results_KD_Opt_Teach/results_KD_Opt_Teach_r9/CM_r9_new_data_3")
 # Pfad zur Textdatei
 misclassified_path = "../Meilenstein 4/Offline Distillation/results/results_KD_Opt_Teach/results_KD_Opt_Teach_r9/misclassified_new_data_3.txt"
@@ -42,7 +41,7 @@ class_names  = test_ds.class_names
 file_paths = []
 for class_name in class_names:
     class_dir = os.path.join(TEST_DATA_DIR, class_name)
-    images = sorted(os.listdir(class_dir))  # alphabetisch innerhalb der Klasse
+    images = sorted(os.listdir(class_dir))  # Alphabetisch innerhalb der Klasse
     for img in images:
         file_paths.append(os.path.join(class_dir, img))
 

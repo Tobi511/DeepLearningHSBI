@@ -16,9 +16,9 @@ IMG_SIZE = 224
 BATCH_SIZE = 32
 NUM_CLASSES = 15
 
-TEST_DATA_DIR = "../../../Vegetable Images/test_v2"  # <- Anpassen
-MODEL_WEIGHTS_PATH = "../models/model_KD_Opt_Teach/model_KD_Opt_Teach_r9/student_weights.h5"  # <- Anpassen
-CLASS_NAMES_JSON = "../models/model_KD_Opt_Teach/model_KD_Opt_Teach_r9/class_names.json"  # <- Anpassen
+TEST_DATA_DIR = "../../../Vegetable Images/test_v2"
+MODEL_WEIGHTS_PATH = "../models/model_KD_Opt_Teach/model_KD_Opt_Teach_r9/student_weights.h5"
+CLASS_NAMES_JSON = "../models/model_KD_Opt_Teach/model_KD_Opt_Teach_r9/class_names.json"
 SAVE_DIR = "./gradcam_output"  # Ausgabeordner
 
 # Nur falsch klassifizierte speichern / alle speichern
@@ -49,24 +49,27 @@ def load_model():
 
 # ----------------------------- Grad-CAM Utilities -----------------------------
 def get_gradcam_heatmap(model, image, last_conv_layer_name, pred_index=None):
-    grad_model = tf.keras.models.Model(
-        [model.inputs], [model.get_layer(last_conv_layer_name).output, model.output]
-    )
+    grad_model = tf.keras.models.Model([model.inputs], [model.get_layer(last_conv_layer_name).output, model.output])
+
     with tf.GradientTape() as tape:
         conv_outputs, predictions = grad_model(image)
         if pred_index is None:
             pred_index = tf.argmax(predictions[0])
         class_channel = predictions[:, pred_index]
+
     grads = tape.gradient(class_channel, conv_outputs)
     pooled_grads = tf.reduce_mean(grads, axis=(0, 1, 2))
     conv_outputs = conv_outputs[0]
+
     heatmap = conv_outputs @ pooled_grads[..., tf.newaxis]
     heatmap = tf.squeeze(heatmap)
     heatmap = tf.maximum(heatmap, 0) / tf.reduce_max(heatmap)
+
     return heatmap.numpy()
 
 
 def save_gradcam(image, heatmap, save_path, alpha=0.4, true_label=None, pred_label=None):
+
     # Konvertiere PIL zu RGB und dann zu NumPy
     image = image.convert("RGB")
     img_np = np.array(image)

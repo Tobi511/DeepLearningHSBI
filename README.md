@@ -33,7 +33,7 @@ Meilenstein 4: 04.07.2025 8:00 Uhr
 
     Alle relevanten Dateien für den Meilenstein befinden sich im entsprechenden Ordner.
     
-    Im Ordner Offline Distillation befindet sich jeweils unter 'training' der Code für das Training und auch der Code zur Erstellung einer HeatMap für ein einzelnes Bild.
+    Im Ordner Offline Distillation befindet sich jeweils unter 'training' der Code für das Training und auch der Code zur Erstellung einer HeatMap je Eingabebild für den gegebenen Datensatz.
     
     Die Ergebnisse sind jeweils im zugehörigen 'results' Ordner zu finden.
 

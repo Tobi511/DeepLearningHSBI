@@ -91,7 +91,7 @@ teacher_backbone = ResNet50(
 
 tf.keras.backend.clear_session()
 
-# Partial Fine-Tuning: nur letzte 20 Layer trainierbar
+# Partial Fine-Tuning: nur letzte 18 Layer trainierbar
 teacher_backbone.trainable = True  # True
 for layer in teacher_backbone.layers[:-18]:
     layer.trainable = False
@@ -118,7 +118,7 @@ def create_student_model():
         layers.GlobalAveragePooling2D(),
         layers.Dense(128, activation='relu', kernel_regularizer=regularizers.l2(5e-4)),
         layers.BatchNormalization(), layers.Dropout(0.3),
-        layers.Dense(NUM_CLASSES)  # logits
+        layers.Dense(NUM_CLASSES)  #softmax entfernt, logits
     ])
     return model
 
@@ -138,6 +138,7 @@ class Distiller(tf.keras.Model):
     def compile(self, optimizer, metrics):
         super().compile(optimizer=optimizer, metrics=metrics)
 
+    # Override train_step für Loss Berechnung in der Distillation
     def train_step(self, data):
         x, y_true = data
         teacher_logits = self.teacher(x, training=False)
@@ -157,6 +158,7 @@ class Distiller(tf.keras.Model):
         results['soft_loss'] = soft_loss
         return results
 
+    # Override test_step für Evaluation, normaler Val_loss für Vergleichbarkeit
     def test_step(self, data):
         x, y_true = data
         student_logits = self.student(x, training=False)
